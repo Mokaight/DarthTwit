@@ -1,0 +1,21 @@
+body > header {
+	padding: 0;
+	margin: 0;
+	position : relative;
+	text-align : center;
+    font-family: "Comic Sans MS", "Arial Black", sans-serif;
+	color : #e1e2e3;
+	text-shadow : 2px 2px 4px #4d4d4d;
+	height: 200px;
+	top : 0;
+	background-image: url(style/header_bleuV_original.png);
+}
+body > header > h1{
+	position: relative;
+	top : 20%;
+}
+
+body > header > p{
+	position: relative;
+	top : 30%;
+}

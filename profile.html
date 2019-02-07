@@ -1,0 +1,94 @@
+<!doctype html> 
+<html> 
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="LANG" content="fr"/>
+		
+		<meta name="DESCRIPTION" content=" Page de connection"/>
+		<link rel="stylesheet" type="text/css" href="nav.css">
+		<link rel="stylesheet" type="text/css" href="header.css">
+		<link rel="stylesheet" type="text/css" href="body.css">
+		
+		<title> Touiteur - Profile</title>	
+	  	<link rel="icon" type="image/png" href="style/logo.png" />
+	</head>
+	
+	<body>
+		<header>
+			<h1>Bienvenue sur Touiteur !</h1>
+			<p>Le premier réseau social sans aucun utilisateur...</p>
+		</header>
+		
+		<nav class="global-nav">
+			<div id="search-nav">
+				<p>Les recherche c'est par ici !</p>
+				<span class="icon"><i class="fa fa-search"></i></span>
+				<input id="search-imput" name="q" type="text" class="search-input"  placeholder="Entrez un mot-clef..." autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-5" dir="ltr">
+			</div>
+			
+			<div id="link-nav">
+				<ul>
+				<ul>				    
+						<li><a id="param-link" href="parametre.html">Paramètres</a></li>
+				 		<li><a id="follow-link" href="followers.html">Followers</a></li>
+						<li><a id="chat-link" href="chat.html">Messages Privés</a></li>			
+					<li><a id="deco-link" href="deconnexion.php">Deconnecte-toi</a></li>
+				</ul>
+			</div>
+		</nav>
+		<main>
+			<section id="information">
+				<header>
+					<h3>Votre profil<h3>
+				</header>
+				
+				<article id="main-info">
+				</article>
+				
+				<article id="other-info">
+				</article>
+				
+				<footer>
+					<p class="f1">Fin du profil...  </p>
+				</footer>
+			</section>
+			
+			<section id="wall">
+				<header>
+					<h3>Fil d'actualité<h3>
+				</header>
+				
+				<article id="sendpost">
+					<form action="poster.php" method="post">
+						<legend>Publier un Message :</legend>
+						<TEXTAREA name="Message" rows=4 cols=40></TEXTAREA> 
+						<input id="post-imput" type="button" value = "Envoyer"/>
+					</form>
+				</article>
+				
+				<footer>
+					<p class="f1">Fin du Mur...  </p>
+				</footer>
+			</section>
+			
+			<section id="touitos">
+					<header>
+					<h3>News<h3>
+				</header>
+				
+				<article id="touitos-info">
+				</article>
+				
+				<article id="news-info">
+				</article>
+				
+				<footer>
+					<p class="f1">Fin des news...  </p>
+				</footer>
+			</section>
+		</main>
+		<footer>
+			<p class="f1">Ceci est une page de Touitteur, Copyright MaxouzeGuigouzeCompany©  </p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,192 @@
+<!--<?php
+try{
+	$bdd = new PDO('mysql:host=localhost;dbname=bde11305124', 'root', '');
+	$bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);// ERRMODE_WARNING -> permet d'afficher les erreur de requêtes sql \ ERRMODE_EXEPTION -> affiche des exeptions et non des warning \ ERRMODE_SILENTE -> celui de base qui n'affiche rien
+}catch(PDOExeption $e){
+	echo $e;
+}
+
+$sqlSelectLastTioutPub;
+$reqSelectLastTioutPub;
+
+$oldTouit;
+$youngTouit;
+?>-->
+
+<!doctype html>
+<html class="no-js" lang="fr">
+<head>
+		<meta charset="UTF-8">
+		<title>Touiter</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style/index.css" media="all">
+		<link rel="stylesheet" href="style/navIndex.css" media="all">
+		<script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="src/jquery.autocomplete.js"></script>
+    
+</head>
+<body>
+	
+	<header id="header">
+	<ul id="tabnav">
+	        <li id ="Deco"><a href="connexion.html">Déconnexion</a></li>
+		<li ><a href="index.html">Acceuil</a></li>
+		<li ><a href="Messagerie.html">Messagerie</a></li>
+    </ul>
+    <img src="style/t.png" />
+
+
+    		<nav class="global-nav">
+			<div id="search-nav">
+				<p>Les recherches c'est par ici !</p>
+				<span class="icon"><i class="fa fa-search"></i></span>
+				<input id="autocomplete-ajax"  type="text" class="search-input"  placeholder="Entrez un mot-clef..."  />
+			</div>
+
+		</nav>
+
+
+
+	</header>
+	<div id="Notification" class="box-tweet">
+	<!-- valeur des notif -->
+	</div>
+	<main class="main">
+
+	<div id="listeSuiveur" class="cote-gauche box-tweet">	
+			<article class="box-tweet titreDesBoxs">
+			Liste des personnes qui vous suivent
+			</article>
+			<div id="NomSuiveur">
+
+			</div>
+			<!-- contenu des suiveurs -->
+	</div>
+	<div id="cote-gauche-bas" class="box-tweet">
+		    <article class="box-tweet titreDesBoxs">
+			Liste des personnes qui vous demande en amis :
+			</article>
+			<div id="NomDemande">
+			<!-- Contenu des demandes-->
+			</div>
+
+	</div>
+	<div id="MessagePrive" class="box-tweet">
+			<p class = " box-tweet titreDesBoxs">Messages Privée:  </p>
+			<div id="filDesMessages">
+			<!--Tout les touites -->
+			</div>
+			<!--<div class="milieu box-tweet">
+					<p> Ceci est un Touite de base , j'aime boire de la biere et dormir des dans des petits dortoirs de merde :D </p>
+			</div>
+			<div class="milieu2 box-tweet">
+					<p> Ceci est un Touite de base , j'aime boire de la biere et dormir des dans des petits dortoirs de merde :D </p>
+			</div>-->
+	
+	</div>
+	<div id="publierMessage">
+		<ul id="tabMessage">
+		<li id="firstLI">
+                        <div id="unMessage">
+		                <div class="box-tweet">
+				                <p class="titreDesBoxs">
+				                    Publie un Message Privée: 
+				                </p>
+		                </div>
+		                <textarea name="message" id="TouitePrive"  placeholder="Press Enter to publish"></textarea>
+		        </div>
+		</li>
+		<li id="secondLI">
+                	<div id="Destinataire">
+	                        <div class="box-tweet">
+				                <p id="DestinataireID" class="titreDesBoxs">
+				                    Le destinataire est :  
+				                </p>
+				                <span id="DestinataireMess">Personne</span>
+		                </div>
+	                </div>
+	        </li>
+	        </ul>
+	</div>
+
+	
+	<div class="box-tweet cote-droit-haut">
+			<p class = " box-tweet titreDesBoxs">Ton identité ! </p>
+			<img src="style/lol.png" />
+			<div id="InfoPerso" class="box-tweet">
+			</div>
+			<div class="box-tweet">
+			<p class="titreDesBoxs">
+			    Publie un statut : 
+			</p>
+			</div>
+			<textarea name="message" id="message"  placeholder="Press Enter to publish"></textarea>
+			<input  id="modifProfil" type="submit" name="Valider" value="Modifier mes informations"/>
+
+	</div>  
+	<div class=" box-tweet cote-droit-bas">
+			<p class = " box-tweet titreDesBoxs">Page actuelle :   </p>
+			<div id="InfoPage" class="box-tweet">
+			</div>
+			<input  id="DemandeAmi" class="DemandeAmi" type="submit"  value="Je veux être ton ami !"/>
+			<input  id="DeleteDemande" class="DemandeAmi" type="submit"  value="Annuler la demande"/>
+			<input  id="DeleteAmi" class="DemandeAmi" type="submit"  value="Divorcer"/>
+	</div>
+
+	<div id="popup">
+			<div id="fondPopup">
+			</div>
+
+			<div id="conteneurForm">
+				<form>
+					<p id="titrePopup"> Ici vous pouvez changer d'identitée ! </p>
+					<div id ="information">
+
+
+		            </div>
+					  <fieldset>
+						 <legend>Nouvelle identitée</legend>
+							<ul>				    
+								<li>
+								<label for="pseudo">Pseudo</label>
+								<input id="pseudo" name="pseudo" type="text" required/>
+							  </li>
+							  <li>
+								<label for="email">Mail</label>
+								<input id="email" name="email" type="email" required/>
+							  </li>
+							  <li>
+								<label for="mdp">Mot de passe</label>
+								<input id="mdp" name="mdp" type="password" required/>
+							  </li>
+								<script></script>
+							  <li>
+								<label for="mdp2">Repeter le mot de passe</label>
+								<input id="mdp2" name="mdp2" type="password" required/>
+							  </li>
+							  <li>
+							  	<label>Choississez votre thème</label>
+								  <select id="theme">
+								  	<option>Normal</option>
+									<option>Blur</option>
+									<option>Darky</option>
+									<option>Moche</option>
+								 </select>				
+							  </li>	
+							</ul>
+						 </fieldset>
+							<input id= "changement" type="submit" name="Valider" value="Je valide mes changements "/>
+					</form>
+			</div>
+	</div>
+
+
+	</main>
+	<footer id="footer" role="contentinfo" >
+		Ceci est une page de Touitteur, Copyright MaxouzeGuigouzeCompany©
+	</footer>
+	<script src="popup.js"></script>
+	<script src="index.js"></script>
+	<script src="Messagerie.js"></script>
+</body>
+</html>

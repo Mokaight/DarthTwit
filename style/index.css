@@ -1,0 +1,587 @@
+*{
+	padding: 0;
+	margin: 0;
+	
+}
+html{
+	min-width: 1200px;
+	overflow-x : scroll;
+}
+html,body{
+        
+	height: 100%;
+	widows: 100%;
+	overflow-y:hidden ;
+
+}
+/**********************************TEST Encrage*************************************************/
+ 
+#wrap {
+	position: relative;
+	top: 0;
+	transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);
+}
+#main, #main2{
+	height: 1000px;
+	padding-top:   50px;
+	transition: background-position 1.4s  cubic-bezier(.49,.22,.52,1.35);
+}
+#main { 
+	background:url("fond.jpg") center 0 no-repeat fixed; 
+}
+#main2 { 
+	background: url("parallax.jpg") center 0 no-repeat fixed; 
+}
+.slide_inside {
+	top : 0;
+	width: 95%;
+	left : 0;
+    height : 75%;
+	margin: 0 auto;
+	position: relative;
+	background-color: rgba(0, 0, 0, .4);
+	
+}
+#s2:target ~ #wrap {
+	top:-1000px;
+}
+ 
+/* décalage des fonds de chaque slide */
+#s2:target ~ #wrap #main { background-position: 50% 36%; }
+#s2:target ~ #wrap #main2 { background-position: 50% 0%; }
+/* vers Slide 1 */
+#s1:target ~ #wrap { top:0px; }
+
+#s1:target ~ #wrap #main { background-position: 50% 0%; }
+#s1:target ~ #wrap #main2 { background-position: 50% -35%; }
+
+ 
+/*********************************************************************************************/
+#Notification{
+	position: absolute;
+	width : 15%;
+	height : 2%;
+	top : 3%;
+	left : 3%;
+	z-index: 4;
+	background-color: rgb(0, 255, 237);
+	opacity: 0.8;
+	border-radius: 100px;
+    padding: 10px;
+    display : none;
+    font-family: arial,sans-serif;
+	color: #005cff;
+	font-weight: bold;
+	text-align: center;
+
+}
+.ListTouitesPrive{
+	background-color: #f5f8fa;
+	margin-top : 2%;
+}
+.ListTouites{
+	background-color: #f5f8fa;
+	margin-top : 2%;
+}
+#header{
+        /*TEST ICI*/
+        min-width: 1200px;
+	position: fixed;
+	width : 100%;	
+	min-height : 1px;
+	height : 5%;
+	top : 0;
+	left : 0;
+	background-color : #FFF;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index : 14;
+}
+#header img{
+	position : absolute;
+	width : 20px;
+	height : 20px;
+	left : 48%;
+	bottom : 10%;
+}
+.ListTouitesAmis{
+        margin-top : 2%;
+}
+#tabnav {
+	margin: 0;
+	overflow: hidden;
+	}
+
+#tabnav li {
+	position: relative;
+	margin-top: 12px;
+	left : 5%;
+	height : 100%;
+	padding: 0;
+	display: inline-block;
+	list-style-type: none;	
+	font-family: arial,sans-serif;
+	border-left: 1px solid black;
+
+	
+	}
+#filDesMessages, .filDesTouites{
+	width: 100%;
+	height: 100%;
+	
+}
+#tabnav a:link, #tabnav a:visited {
+	float: left;
+	font-size: 15px;
+	line-height: 14px;
+	font-weight: bold;
+	margin: 0 10px 4px 10px;
+	text-decoration: none;
+	color: #000000;
+	}
+
+#tabnav li.active a:link, #tabnav li.active a:visited, #tabnav a:hover {
+	border-bottom: 4px solid #000000;
+	background: #FFFFFF;
+	color: #000000;
+	}
+
+#tabnav a:hover {
+	color: #005CFF;
+	}
+.submit{
+        position : relative;
+        width : 70%;
+        left : 0;
+}
+.Divorcer{
+   position : relative;
+   left : 60%;
+}/*
+.main{
+	position : relative;
+	top : 5%;
+	left : 0;
+	width: 100%;
+	height : 93%;
+	border : 1px solid #C9CDD9;
+	background-image: url("parallax.jpg");
+	background-color: #f5f8fa;
+}*/
+.cote-gauche{
+    height: 33%;
+    min-height: 300px;
+    min-width: 250px;
+    position: absolute;
+    width: 17%;
+    left: 0;
+    top: 10%;
+	background-color: white;
+	cursor: pointer;
+}
+
+.NomSuiveur{
+	
+	position: relative;
+	width: 100%;
+	height:94%;
+	overflow: scroll;
+	top : 2px;
+}
+#cote-gauche-bas{
+	position: absolute;
+	bottom : 10%;
+	width: 17%;
+	min-width  : 250px;
+	height : 25%;
+	cursor: pointer;
+}
+.ReponseDemande{
+        position : relative;
+        text-align : center;
+
+}
+.InfoPage{
+		top : 5%;
+		border: 2px solid #C9CDD9;
+		position: relative;
+		height: 70%;
+	    font-family: arial,sans-serif;
+	    font-weight: bold;
+	    font-size: 90%;
+	    background-color: #f5f8fa;
+}
+#NomDemande{
+	position: relative;
+	width: 100%;
+	height:83%;
+	overflow: scroll;
+	top : 2px;
+}
+.titreDesBoxs{
+	font-family: arial,sans-serif;
+	color: #000000;
+	font-weight: bold;
+	font-size: 95%;
+	text-align: center;
+	width : 100%;
+	margin-bottom: 1%; 
+
+
+}
+.lesSuiveurs{
+	position: relative;
+    background-color: #f5f8fa ;
+    border: 1px solid #e1e8ed;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px grey;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: arial,sans-serif;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+.Nom{
+	font-weight: bold;
+	text-align: center;
+	position: relative; 
+	left : 5%;
+
+}
+.lesSuiveurs .statut{
+        left : 5%;
+        padding-right : 2%;
+                width : 60%;
+}
+
+.fil-actualite{
+	position : absolute;
+	left : 30%;
+	top : 10%;
+	width: 40%;
+	min-height : 90%;
+	height : 93%;
+	overflow : scroll;
+	overflow-x: hidden; 
+}		
+
+#Les-touites-fil{
+        position : relative;
+        display : none;
+        width : 100%;
+        height : 100%;
+}
+#Mes-touites-fil{
+        position : relative;
+        width : 100%;
+        height : 100%;
+}
+.milieu{
+	position : relative;
+	margin : 10px;
+	width: 90%;
+	height : 30%;
+}
+
+#footer {
+	text-align: center;
+	margin-top :  2px;
+	border: 2px solid #C9CDD9;
+	position : fixed;
+	left: 0%;
+	bottom: 0;
+	box-shadow: -2px 2px 4px black;
+	width : calc(100% - 4px);
+	min-height : 2%;
+	background-color : white;
+    
+}
+#DateMessage{
+	position : relative;
+	left  : 70%;
+	bottom : 0px;
+}
+#MessageTouite{
+	position: relative;
+	top : 100%;
+	width: 80%;
+	height: 100%;
+
+}
+#publierTouite{
+	top : 0;
+	display : hidden;
+	position : relative;
+	left : 30%;
+	width: 30%;
+
+}
+
+#TouitePrive{
+	width : 99%;
+	resize: none;
+}
+#cote-droit-haut-2{
+	top : 0;
+
+}
+#cote-droit-bas-2{
+	bottom : 20%;
+}
+.cote-droit-haut{
+	position: absolute;
+	right : 5%;
+	top  : 10%;
+	width  : 17%;
+	height : 33%;
+	min-height : 300px;
+	min-width  : 250px;
+	z-index : 1;
+}
+.cote-droit-haut img{
+	position : relative;
+	width : 20%;
+	height : 15%;
+	top : 2px;
+	left  : 70%;
+	border :1px solid black;
+}
+.cote-droit-haut .InfoPerso{
+		border: 2px solid #C9CDD9;
+		position: relative;
+		height: 40%;
+	    font-family: arial,sans-serif;
+	    font-weight: bold;
+	    font-size: 90%;
+	    background-color: rgba(255, 255, 255, 0.);
+}
+.statut1 , .statut2{
+	position: relative ;
+	width: 98% ; 
+	min-height: 40px;
+	resize: none;
+}
+
+.modifProfil{
+	padding: 0;
+	margin: 0;
+	position: relative;
+	bottom : 0;
+	height : 10%;
+	left  : 20%;
+	width : 60%;
+	min-width : 130px;
+}
+
+.cote-droit-bas{
+	position: absolute;
+	right : 5%;
+	bottom  : 10%;
+	width  : 17%;
+	height : 30%;
+	min-width  : 250px;
+	min-height : 30%;
+	z-index: 1;
+}
+.NOUS{
+	position: relative;
+	top : 40%;
+	left : 0;
+}
+.DemandeAmi{
+	display: none;
+	position: absolute ;
+	bottom : 3%;
+	left : 20%;
+}
+.box-tweet{
+       
+    background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 4px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: pointer;
+	border : 1px solid white;
+}
+
+.popup{
+	position : absolute;
+	width : 100%;
+	height : 100%;
+	top : 0;
+	left : 0;
+	display : none;	
+	z-index: 5; 
+}
+.popup .fondPopup{
+	position : relative;
+	top : 0;
+	left : 0;
+	height : 100%;
+	width :100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 6;
+}
+.popup .conteneurForm{
+	position : absolute;
+	width : 50%;
+	height : 50%;
+	top : 20%;
+	left : 20%;
+	background-color: #FFF;
+	z-index: 7;
+	-webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+    transition: all linear 0.2s;
+}
+.popup .conteneurForm form{
+	position : relative;
+	height : 80%;
+	width : 70%;
+	top : 10%;
+	left : 15%;
+	background-color : #fff;
+	border-radius : 4px;
+	border : 1px solid #e1e8ed;
+}
+.popup .conteneurForm form fieldset{
+	position : relative;
+	left : 1%;
+	height : 180px;
+	top : 20%;
+	width: 98%;
+	font-family: arial,sans-serif;
+}
+.popup .conteneurForm form .changement{
+	position: absolute;
+	bottom : 0;
+	right : 0;
+}
+.titrePopup{
+	position: relative;
+	top : 2%;
+	text-align: center;
+	font-weight: bold;
+	color : red;
+	font-family: arial,sans-serif;
+	font-size: : 80px;
+
+}
+.popup .conteneurForm .information{
+	position : relative;
+	font-size: : 20px;
+	font-family: arial,sans-serif;
+	left : 1%;
+	top : 10%;
+}
+/*TEST MENU */
+.menu-vertical {
+  position: absolute;
+  top : 0;
+  left : 63%;
+  width: 8%;
+  min-width: 8%;
+  height : auto; 
+  list-style: none;  
+  margin: 0; 
+  background: #F2F2F2;
+  border-radius: 4px;
+  border: 1px solid #e1e8ed;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px grey;
+}
+.item p{
+  display: block;
+  font-size : 80%;
+}
+ 
+.item p{
+  margin: 1px 0;
+  padding: 8px 8px; 
+  color: #666;
+  background: #FFF;
+  text-decoration: none;
+  -webkit-transition: all .3s; 
+  transition: all .3s; 
+}
+.item p:hover,
+.item p:focus {
+   background-color: #3cfbff;;
+   color: #005cff;
+   padding-left: 10%;
+}
+/*MESSAGERIE PRIVEE */
+#MessagePrive{
+	position : relative;
+	left : 30%;
+	top : 0;
+	width: 40%;
+	height : 70%;
+	resize: none;
+	overflow-y : scroll;
+	background-color : rgba(255,255,255,0);
+	overflow-x : hidden;
+        
+}
+#publierMessage{
+	margin-top: 2%; 
+ 	bottom : 0;
+	position : relative;
+	left : 30%;
+	width: 40%;
+	height : 20%;       
+}
+ul#tabMessage li{
+        display : inline-table;
+        position : relative;
+}
+#firstLI{
+        width : 70%;
+}
+#secondLI{
+        position : relative;
+        width : 25%;
+        height : 100%;
+}
+#unMessage{
+        position : relative;
+        width : 100%;
+}
+#Touite{
+
+			width : 100%;
+	        resize: none;
+	        height : 40px;
+}
+#Destinataire{
+	top : 0;
+	position : relative;
+	width: 100%;
+	height : 100%;
+}
+#listeSuiveur{
+        top : 5%;
+        height : 70%;
+        width : 20%;
+}
+#DestinataireMess{
+	font-family: arial,sans-serif;
+	font-weight: bold;
+        position : relative;
+        left : 35%;
+}
+
+
+
+
+
+
+
+#fil{
+	min-width: 500px;
+	height : 90%;
+
+}

@@ -1,0 +1,75 @@
+<!doctype html> 
+<html> 
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="LANG" content="fr"/>
+		
+		<meta name="DESCRIPTION" content=" Page de connection"/>
+		<link rel="stylesheet" type="text/css" href="style/nav.css">
+		<link rel="stylesheet" type="text/css" href="style/header.css">
+		<link rel="stylesheet" type="text/css" href="style/body.css">
+		
+		<title> Touiteur - Connexion</title>	
+	  	<link rel="icon" type="image/png" href="style/logo.png" />
+	  	<script src="jquery-2.2.1.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<img id="img" src="style/logo.png" />
+			<img id="img2" src="style/logo.png" />
+			<h1>Bienvenue sur Touiteur !</h1>
+			<p>Le premier réseau social sans aucun utilisateur...</p>
+		</header>
+		<nav class="global-nav">
+			<div id="search-nav">
+				<p>Les recherches c'est par ici !</p>
+				<span class="icon"><i class="fa fa-search"></i></span>
+				<input id="search-imput" name="q" type="text" class="search-input"  placeholder="Entrez un mot-clef..." autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-5" dir="ltr"/>
+			</div>
+			<div id="link-nav">
+				<ul class ="group" id = "menu">
+					<li><a id="register-link" href="inscription.html">Inscrit-toi</a></li>
+					<li><a id="connexion-link" href="connexion.html">Connecte-toi</a></li>
+
+				</ul>
+			</div>
+		</nav>
+		<main id="one-section">
+			<div id="two-section">
+				<img id="img" src="style/twitter-icon.png" />
+			</div>
+			<section>
+				<article>
+					<header>
+						<h2>Connexion au Compte: </h2>
+					</header>
+					<form>
+					<fieldset>
+							 <legend>Compte</legend>
+								<ul>				    
+									<li>
+										<label for="pseudo">Pseudo</label>
+										<input class="champ" id="pseudo" name="pseudo" type="text" required/>
+									</li>
+									<li>
+										<label for="mdp">Mot de passe</label>
+										<input class="champ" id="mdp" name="mdp" type="password" required/>
+									</li>					
+								</ul>
+						</fieldset>
+						<fieldset> 
+							<div id="erreur">
+								<p>Vous n'avez pas rempli correctement les champs du formulaire !</p>
+							</div>
+							<input type="button" name="Valider" id="submit" value="Je me connecte !"/>
+						</fieldset>
+					</form>
+					<script src="connexion.js"></script>
+				</article>
+			</section>
+		</main>
+		<footer>
+			<p class="f1">Ceci est une page de Touitteur, Copyright MaxouzeGuigouzeCompany©  </p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+
+.autocomplete-suggestions { 
+        border: 1px solid #999; 
+        background:  #f5f8fa; 
+        cursor: default; 
+        overflow: auto; 
+        -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); 
+        -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); 
+        box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); 
+        z-index :10 ;
+}
+.autocomplete-suggestion { 
+        padding: 2px 5px; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        z-index :10 ;
+}
+.autocomplete-no-suggestion { 
+        padding: 2px 5px;
+        z-index :10 ;
+}
+.autocomplete-selected { 
+        background: #F0F0F0; 
+        z-index :10 ;
+}
+.autocomplete-suggestions strong { 
+        z-index :10 ; 
+        font-weight: bold; 
+        color: #000; 
+}
+.autocomplete-group { 
+        z-index :10 ; 
+        padding: 2px 5px; 
+}
+.autocomplete-group strong { 
+        z-index :10 ;
+        font-weight: bold;
+        font-size: 16px; 
+        color: #000000;
+        display: block; 
+        border-bottom: 1px solid #000; 
+}
+
+.global-nav{
+	 position : absolute;
+	 width : 100%;
+	 top : 0;
+	 left : 60%;
+	 min-height : 50px;
+    }
+
+.global-nav #search-nav{
+		text-align : center;
+
+        color: #000000;
+    }
+.global-nav div{
+	        min-width : 500px;
+		width : 35%;
+		position : relative;
+		display: inline-table;
+    }
+	
+.search-input {
+    display: inline-table;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 5px 27px 6px 12px;
+    font-size: 12px;
+    line-height: 1;
+    color: #292f33;
+	padding: 0 12px 0 25px;
+    background: #f5f8fa url("search_logo.png") 8px 7px no-repeat;
+    border: 2px solid #C9CDD9;
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
+	}
+.search-input:hover, .search-input:focus, .search-input:active{
+	outline : none;
+    border: 2px solid #8fa3d6;
+  }
+.global-nav li{
+    display: inline-table;
+}
+.global-nav a{
+	text-align : right;
+	font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size : 0.9em;
+    background-color : #F1F1F1;
+    color: #000000;
+    position: relative;
+    padding: 10px 5px 10px 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    z-index: 900;
+    transition-property: width;
+    transition-duration: 0.2s;
+    border-radius: 10px;
+    box-shadow: -1px 1px 10px black;
+	}
+.global-nav p  {
+		display: inline-table;
+		margin : 2%;
+	    font-family: "Comic Sans MS", "Arial Black", sans-serif;
+		color: #000000;
+		font-size: 90%;
+		font-weight: bold;
+
+
+	}

@@ -1,0 +1,42 @@
+body{
+        margin : 0;
+        padding : 0;
+        background-image  : url('wall.jpg');
+        background-position : right bottom;
+
+}
+#messagerie{
+        position : relative;
+        left : 20%;
+        text-transform: uppercase;
+        text-indent : 50px;
+        color : black;
+        font-size : 50px;
+}
+#info{
+        position : relative;
+        width : 40%;
+        left : 30%;
+        height : 100%;
+        top : 15%;
+        border-style: solid;
+        border-width: 2px;
+        border-color : red;
+        padding : 0;
+        margin : 0;
+        color : yellow;
+}
+#touites_publie{
+        color : red;
+        overflow : scroll;
+        padding : 0;
+        margin : 0;
+        position : relative;
+        width : 40%;
+        left : 30%;
+        height : 500px;
+        top : 0%;
+        border-style: dotted;
+        border-width: 2px;
+        border-color : red;
+}
